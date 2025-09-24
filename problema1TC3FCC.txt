@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace problema_n._01_TC_3_FCC
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int sala;
+            string rng;
+            string linea;
+
+            Console.WriteLine("Escriba su salario mensual: ");
+            linea = Console.ReadLine();
+            sala = int.Parse(linea);
+
+            if (sala < 1200)
+            {
+                        rng = "bajo";
+            }
+            else
+            if (sala >= 1200 && sala <= 2500)
+                {
+                    rng = "medio";
+                } 
+             else
+                {
+                    rng = "alto";
+                }
+
+            Console.WriteLine("Su salario del mes es: " + rng);
+            Console.ReadKey();
+        }
+    }
+}
